@@ -1,6 +1,10 @@
-pry(main)> require './lib/card'
+class Card
+  attr_reader :question,
+                :answer,
+                :category
 
-card = Card.new
-
-
-#coming back to this
+def initialize(question, answer, :Geography)
+  @question = question
+  @answer = answer
+  @category = :Geography
+end
