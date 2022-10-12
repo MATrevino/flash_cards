@@ -3,8 +3,9 @@ class Card
                 :answer,
                 :category
 
-def initialize(question, answer, :Geography)
+def initialize(question, answer, category)
   @question = question
   @answer = answer
-  @category = :Geography
+  @category = category
+end
 end
