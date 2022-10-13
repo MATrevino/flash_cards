@@ -1,28 +1,27 @@
 class Deck
-  attr_reader :question, :answer, :category, :guess, :card, :cards
+  attr_reader :cards
 
   def initialize (cards)
     @cards = cards
-    @deck = deck
 
   end
 
-  def cards
-    @cards = card.turn
+
+  def count
+   cards.length
   end
 
-  # def deck
-  #   @deck
-  # end
-  #
-  # def cards_in_category (category)
-  #    category == cards.category
-  # end
-  #
-  # def count
-  # @cards.length
-  # end
+  def cards_in_category(category)
+    category_cards = []
+
+    @cards.each do |card|
+    if category == card.category
+        category_cards << card
+    end
+  end
+
+  return category_cards
+
 
 end
-
-# need to define cards, count, cards_in_category,
+end
